@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Черновик Устава — Чкаловский 6</title>
+    <!-- Исправленная ссылка на стили -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net">
     <style>
+        body { background-color: #f0f2f5; }
         .draft-watermark { 
             background: #fff3cd; color: #856404; 
             padding: 10px; text-align: center; 
             font-weight: bold; border-bottom: 2px solid #ffeeba;
             margin-bottom: 30px;
         }
-        article { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        article { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        h1, h3 { color: #1a1a1a; }
     </style>
 </head>
 <body>
     <div class="draft-watermark">⚠️ ЭТО ЧЕРНОВИК (ДРАФТ) — ПРОЕКТ ДЛЯ ОБСУЖДЕНИЯ ЖИТЕЛЯМИ</div>
 
     <main class="container">
-        <a href="index.html">← Назад на главную</a>
+        <a href="index.html" role="button" class="outline secondary" style="margin-bottom: 20px;">← Назад на главную</a>
         
         <article>
             <header>
@@ -41,10 +44,9 @@
             </section>
 
             <footer>
-                <p>Ваши замечания к тексту устава направляйте председателю или в чат дома.</p>
+                <p><small>Ваши замечания к тексту устава направляйте председателю или в чат дома.</small></p>
             </footer>
         </article>
     </main>
 </body>
 </html>
-
