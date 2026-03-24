@@ -5,61 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Совет МКД Чкаловский 6</title>
     
-    <!-- Подключаем стили для красоты -->
+    <!-- Подключаем легкую библиотеку стилей -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net">
     
     <style>
-        /* Цветовая схема: Синий (основной) и Красный (акценты) */
         :root {
             --primary: #0056b3;
             --primary-hover: #004494;
         }
 
-        body { background-color: #f8f9fa; }
-        main { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-top: 20px; }
+        body { background-color: #f0f2f5; }
+        main { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 16px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05); 
+            margin-top: 20px; 
+            margin-bottom: 40px;
+        }
 
         /* Стиль для важных новостей */
         .alert-card {
             border-left: 6px solid #d9534f;
             background: #fff5f5;
             padding: 20px;
-            border-radius: 4px 12px 12px 4px;
+            border-radius: 8px;
             margin-bottom: 30px;
         }
 
-        /* Список документов с иконками */
+        /* Список документов */
         .doc-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px;
+            padding: 15px;
             border-bottom: 1px solid #edf2f7;
-            transition: background 0.3s;
+            transition: background 0.2s;
         }
-        .doc-item:hover { background: #f1f5f9; }
+        .doc-item:hover { background: #f8fafc; }
 
-        .contact-box { background: #eef2f7; padding: 20px; border-radius: 12px; }
+        .contact-box { 
+            background: #f8fafc; 
+            padding: 25px; 
+            border-radius: 12px; 
+            border: 1px solid #e2e8f0;
+        }
         
         .map-container {
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             height: 350px;
+            border: 1px solid #e2e8f0;
         }
         
-        h2 { border-bottom: 2px solid #0056b3; display: inline-block; padding-bottom: 5px; margin-bottom: 25px; }
-        .tg-button { background-color: #0088cc !important; border: none; }
+        h2 { border-bottom: 3px solid #0056b3; display: inline-block; padding-bottom: 5px; margin-bottom: 25px; }
+        .tg-button { background-color: #0088cc !important; border: none; width: 100%; }
+        
+        iframe { width: 100%; height: 100%; border: 0; }
     </style>
 </head>
 <body>
 
-    <!-- Шапка сайта -->
+    <!-- Навигация -->
     <nav class="container">
         <ul>
             <li><strong>🏠 Чкаловский 6</strong></li>
         </ul>
         <ul>
-            <li><a href="#news">Объявления</a></li>
+            <li><a href="#news">Новости</a></li>
             <li><a href="#docs">Документы</a></li>
             <li><a href="#contacts">Контакты</a></li>
         </ul>
@@ -69,24 +83,24 @@
         
         <!-- БЛОК: НОВОСТИ -->
         <section id="news">
-            <h2>📢 Важное</h2>
+            <h2>📢 Объявления</h2>
             <div class="alert-card">
-                <h4 style="color: #d9534f; margin-bottom: 10px;">⚡️ Плановые работы</h4>
-                <p>В четверг с 10:00 до 14:00 будет временно ограничена подача горячей воды. Приносим извинения за неудобства.</p>
-                <small>Опубликовано: сегодня</small>
+                <h4 style="color: #d9534f; margin-bottom: 10px;">⚡️ Важное сообщение</h4>
+                <p>Уважаемые жильцы! Здесь будет размещена актуальная информация о собраниях, отключениях или работах в доме.</p>
+                <small>Обновлено: 24 октября 2023</small>
             </div>
         </section>
 
         <!-- БЛОК: ДОКУМЕНТЫ -->
         <section id="docs">
-            <h2>📄 Реестр документов</h2>
+            <h2>📄 Документы</h2>
             <div class="doc-item">
-                <span>📄 Протокол общего собрания (Октябрь 2023)</span>
-                <a href="documents/protokol-1.pdf" target="_blank" class="secondary">Скачать PDF</a>
+                <span>📄 Устав совета дома</span>
+                <a href="documents/ustav.pdf" target="_blank" class="secondary outline">Открыть</a>
             </div>
             <div class="doc-item">
-                <span>📊 Отчет о расходах на содержание дома</span>
-                <a href="documents/report.pdf" target="_blank" class="secondary">Скачать PDF</a>
+                <span>📊 Протокол №1 (2023)</span>
+                <a href="documents/protokol.pdf" target="_blank" class="secondary outline">Открыть</a>
             </div>
         </section>
 
@@ -94,30 +108,27 @@
 
         <!-- БЛОК: КОНТАКТЫ И КАРТА -->
         <section id="contacts">
-            <h2>📞 Полезные контакты</h2>
+            <h2>📞 Связь и адрес</h2>
             <div class="grid">
                 <div class="contact-box">
-                    <p><b>Диспетчер УК:</b> <br> <a href="tel:+74950000000">+7 (495) 000-00-00</a></p>
-                    <p><b>Лифтовая служба:</b> <br> <a href="tel:+74950000001">+7 (495) 000-00-01</a></p>
+                    <p><b>Диспетчер (24/7):</b> <br> <a href="tel:+70000000000">+7 (000) 000-00-00</a></p>
                     <p><b>Председатель:</b> <br> Павел Воложанин</p>
-                    <a href="https://t.me" role="button" class="tg-button">Написать в Telegram дома</a>
+                    <p><b>Адрес:</b> <br> Чкаловский пр., д. 6</p>
+                    <hr>
+                    <a href="https://t.me" role="button" class="tg-button">Чат жильцов в Telegram</a>
                 </div>
                 
                 <div class="map-container">
-                    <!-- ВСТАВЬТЕ КОД ИЗ КОНСТРУКТОРА ЯНДЕКСА НИЖЕ ЭТОЙ СТРОКИ -->
-                    https://yandex.ru/maps/-/CPRlb6OU
-                    <div style="padding: 100px 20px; text-align: center; color: #888;">
-                        Здесь появится ваша карта после вставки кода
-                    </div>
-                    <!-- ВСТАВЬТЕ КОД ИЗ КОНСТРУКТОРА ЯНДЕКСА ВЫШЕ ЭТОЙ СТРОКИ -->
+                    <!-- Вставленная карта по вашей ссылке -->
+                    <iframe src="https://yandex.ru" allowfullscreen="true"></iframe>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="container" style="text-align: center; padding: 40px 0; color: #888;">
-        <p>&copy; 2023 Совет дома Чкаловский 6. Работаем на благо жителей.</p>
+    <footer class="container" style="text-align: center; padding-bottom: 40px; color: #718096;">
+        <small>&copy; 2023 Совет МКД "Чкаловский 6". Официальный сайт жителей.</small>
     </footer>
 
 </body>
