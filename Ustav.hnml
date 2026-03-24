@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Черновик Устава — Чкаловский 6</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net">
+    <style>
+        .draft-watermark { 
+            background: #fff3cd; color: #856404; 
+            padding: 10px; text-align: center; 
+            font-weight: bold; border-bottom: 2px solid #ffeeba;
+            margin-bottom: 30px;
+        }
+        article { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <div class="draft-watermark">⚠️ ЭТО ЧЕРНОВИК (ДРАФТ) — ПРОЕКТ ДЛЯ ОБСУЖДЕНИЯ ЖИТЕЛЯМИ</div>
+
+    <main class="container">
+        <a href="index.html">← Назад на главную</a>
+        
+        <article>
+            <header>
+                <h1>Устав Совета МКД «Чкаловский 6»</h1>
+                <p><i>Версия от: 24.10.2023</i></p>
+            </header>
+
+            <section>
+                <h3>1. Общие положения</h3>
+                <p>1.1. Совет многоквартирного дома (далее – Совет) является выборным органом из числа собственников помещений в данном доме.</p>
+                <p>1.2. Совет действует в интересах всех собственников и подотчетен общему собранию.</p>
+            </section>
+
+            <section>
+                <h3>2. Полномочия Совета</h3>
+                <p>2.1. Обеспечение выполнения решений общего собрания собственников.</p>
+                <p>2.2. Контроль за оказанием услуг и выполнением работ по содержанию и ремонту общего имущества.</p>
+                <p>2.3. Представление предложений по вопросам планирования работ по капитальному ремонту.</p>
+            </section>
+
+            <footer>
+                <p>Ваши замечания к тексту устава направляйте председателю или в чат дома.</p>
+            </footer>
+        </article>
+    </main>
+</body>
+</html>
 
