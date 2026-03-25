@@ -4,70 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Совет МКД Чкаловский 6</title>
-    
-    <!-- ПОЛНЫЕ РАБОЧИЕ ССЫЛКИ -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com" rel="stylesheet">
-
     <style>
-        :root { --primary: #0056b3; --tg-color: #0088cc; }
+        /* БАЗОВЫЕ НАСТРОЙКИ (БЕЗ ВНЕШНИХ БИБЛИОТЕК) */
+        * { box-sizing: border-box; }
         
         body { 
-            background-color: #007bc1; 
-            font-family: 'Inter', sans-serif; 
-            margin: 0; padding: 0; 
-            display: flex; flex-direction: column; align-items: center; 
+            background-color: #007bc1; /* Фирменный синий фон */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #333;
         }
 
-        .header { color: white; text-align: center; padding: 50px 20px 80px; }
-        .header h1 { font-family: 'Montserrat', sans-serif; margin: 0; font-size: 2.2rem; color: white !important; }
+        /* ШАПКА */
+        .header {
+            color: white;
+            text-align: center;
+            padding: 40px 20px 60px;
+        }
+        .header h1 { margin: 0; font-size: 2.2rem; letter-spacing: 1px; }
+        .header p { opacity: 0.8; margin-top: 5px; font-size: 1.1rem; }
 
-        main { 
-            background: white; width: 95%; max-width: 1000px;
-            border-radius: 20px; padding: 30px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-            margin-top: -50px; margin-bottom: 50px;
-            position: relative; z-index: 10;
+        /* ОСНОВНАЯ КАРТОЧКА */
+        .main-card {
+            background: white;
+            width: 95%;
+            max-width: 900px;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            margin-top: -30px;
+            margin-bottom: 40px;
         }
 
-        .alert-card {
-            border-left: 6px solid #d9534f; background: #fff5f5;
-            padding: 20px; border-radius: 12px; margin-bottom: 30px;
+        /* БЛОК ОБЪЯВЛЕНИЯ */
+        .alert-box {
+            background: #fff5f5;
+            border-left: 6px solid #d9534f;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+        .alert-box h4 { color: #d9534f; margin: 0 0 10px 0; font-size: 1.2rem; }
+        .alert-box p { margin: 0; line-height: 1.5; font-size: 1rem; }
+
+        /* СЕТКА: КОНТАКТЫ + КАРТА */
+        .content-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
-        /* Адаптивная сетка: на ПК 2 колонки, на телефоне 1 */
-        .content-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-            gap: 25px; 
+        .contact-info {
+            flex: 1 1 350px;
+            background: #fcfcfc;
+            border: 1px solid #eee;
+            padding: 25px;
+            border-radius: 15px;
         }
 
-        .contact-box { 
-            border: 1px solid #e2e8f0; padding: 25px; 
-            border-radius: 15px; background: #fcfcfc; 
-        }
-        
-        .tg-button { 
-            background-color: var(--tg-color) !important; 
+        .contact-info h3 { margin-top: 0; color: #0056b3; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .contact-item { margin-bottom: 15px; font-size: 1.05rem; }
+
+        /* КНОПКА ТЕЛЕГРАМ */
+        .tg-button {
+            display: block;
+            background: #0088cc;
             color: white !important;
-            display: flex; align-items: center; justify-content: center;
-            gap: 12px; text-decoration: none; padding: 18px;
-            border-radius: 12px; font-weight: bold; width: 100%;
-            transition: transform 0.2s, filter 0.2s; border: none;
-            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            text-decoration: none;
+            padding: 16px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 25px;
+            transition: background 0.3s;
         }
-        .tg-button:hover { transform: translateY(-3px); filter: brightness(1.1); }
+        .tg-button:hover { background: #0077b5; }
 
-        .map-container {
-            border-radius: 15px; overflow: hidden; height: 400px;
-            border: 1px solid #e2e8f0;
+        /* КАРТА */
+        .map-box {
+            flex: 1 1 350px;
+            height: 350px;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            background: #f0f0f0;
         }
         iframe { width: 100%; height: 100%; border: 0; }
-        
-        footer { color: rgba(255,255,255,0.6); padding-bottom: 30px; font-size: 0.9rem; text-align: center; }
+
+        /* ПОДВАЛ */
+        footer { color: rgba(255,255,255,0.7); padding-bottom: 30px; font-size: 0.9rem; text-align: center; }
+
+        /* МОБИЛЬНАЯ ОПТИМИЗАЦИЯ */
+        @media (max-width: 600px) {
+            .header h1 { font-size: 1.8rem; }
+            .main-card { padding: 15px; }
+            .map-box { height: 300px; }
+        }
     </style>
 </head>
 <body>
@@ -77,28 +114,37 @@
         <p>Портал Совета МКД</p>
     </header>
 
-    <main class="container">
-        <!-- Объявление -->
-        <div class="alert-card">
-            <h4 style="color: #d9534f; margin-bottom: 10px; font-family: 'Montserrat';">⚡️ Важное сообщение</h4>
-            <p style="margin: 0; color: #333;">Уважаемые жильцы! Проводится ОСС с 24.03.2026 по 07.04.2026. Просим принять участие.</p>
+    <main class="main-card">
+        <!-- Важное сообщение -->
+        <div class="alert-box">
+            <h4>📢 Важное сообщение</h4>
+            <p>Уважаемые жильцы! Проводится ОСС по выбору совета МКД с 24.03.2026 по 07.04.2026. Просим принять активное участие!</p>
         </div>
 
         <div class="content-grid">
-            <!-- Контакты -->
-            <div class="contact-box">
-                <h3 style="margin-top: 0; color: #333; font-family: 'Montserrat';">📞 Контакты</h3>
-                <p>📍 <b>Адрес:</b><br>Москва, Чкаловский б-р, 6</p>
-                <p>🆘 <b>Диспетчер:</b><br>
-                <a href="tel:84955058989" style="font-size: 1.2rem; font-weight: bold; color: var(--primary); text-decoration: none;">8 495 505-89-89</a></p>
+            <!-- Блок Контакты -->
+            <div class="contact-info">
+                <h3>📍 Информация</h3>
+                <div class="contact-item">
+                    <b>Наш адрес:</b><br>
+                    г. Москва, Чкаловский бульвар, д. 6
+                </div>
+                <div class="contact-item">
+                    <b>📞 Диспетчер (24/7):</b><br>
+                    <a href="tel:84955058989" style="font-size: 1.2rem; font-weight: bold; color: #0056b3; text-decoration: none;">8 495 505-89-89</a>
+                </div>
+                <div class="contact-item">
+                    <b>💼 Председатель:</b><br>
+                    Вакансия открыта
+                </div>
                 
                 <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="tg-button">
-                    <i class="fab fa-telegram-plane"></i> ВСТУПИТЬ В ЧАТ
+                    💬 Вступить в чат Telegram
                 </a>
             </div>
 
-            <!-- Карта -->
-            <div class="map-container">
+            <!-- Блок Карта -->
+            <div class="map-box">
                 <iframe src="https://yandex.ru" allowfullscreen="true"></iframe>
             </div>
         </div>
