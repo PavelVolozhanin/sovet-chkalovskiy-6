@@ -5,56 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Совет МКД Чкаловский 6</title>
     
-    <!-- ИСПРАВЛЕННЫЕ ПОЛНЫЕ ССЫЛКИ -->
+    <!-- ПОЛНЫЕ ССЫЛКИ НА СТИЛИ И ШРИФТЫ -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com" rel="stylesheet">
 
     <style>
         :root { --primary: #0056b3; --tg-color: #0088cc; }
-        body { background-color: #f4f7f9; font-family: 'Inter', sans-serif; margin: 0; }
-        h1, h2, h3, .tg-button { font-family: 'Montserrat', sans-serif; font-weight: 700; }
         
+        body { 
+            background-color: #f4f7f9; 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; 
+            padding: 0;
+        }
+
         .hero {
             background: linear-gradient(135deg, #0056b3 0%, #0088cc 100%);
-            color: white; padding: 60px 20px 100px; text-align: center;
+            color: white; 
+            padding: 40px 20px 100px; 
+            text-align: center;
         }
-        .hero h1 { color: white !important; margin: 0; font-size: 2.2rem; }
+
+        .hero h1 { 
+            font-family: 'Montserrat', sans-serif; 
+            color: white !important; 
+            margin: 0; 
+            font-size: 2.2rem; 
+        }
 
         main { 
-            background: white; padding: 30px; border-radius: 16px; 
+            background: white; 
+            padding: 30px; 
+            border-radius: 16px; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-            margin: -60px auto 40px; max-width: 1000px;
-            position: relative; z-index: 10;
+            margin: -60px auto 40px; 
+            max-width: 1000px;
+            position: relative; 
+            z-index: 10;
         }
 
         .alert-card {
-            border-left: 6px solid #d9534f; background: #fff5f5;
-            padding: 20px; border-radius: 12px; margin-bottom: 30px;
+            border-left: 6px solid #d9534f; 
+            background: #fff5f5;
+            padding: 20px; 
+            border-radius: 12px; 
+            margin-bottom: 30px;
+            text-align: left;
         }
 
-        .grid-custom { display: grid; grid-template-columns: 1fr; gap: 25px; }
-        @media (min-width: 768px) { .grid-custom { grid-template-columns: 1fr 1fr; } }
+        /* Исправление сетки для мобильных и ПК */
+        .grid-custom { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 25px; 
+        }
 
-        .contact-box { border: 1px solid #e2e8f0; padding: 25px; border-radius: 15px; background: #fcfcfc; }
+        .contact-box, .map-container { 
+            flex: 1 1 400px; /* Растягиваются или встают в ряд */
+        }
+
+        .contact-box { 
+            border: 1px solid #e2e8f0; 
+            padding: 25px; 
+            border-radius: 15px; 
+            background: #fcfcfc;
+            text-align: left;
+        }
         
         .tg-button { 
             background-color: var(--tg-color) !important; 
             color: white !important;
-            display: inline-flex; align-items: center; justify-content: center;
-            gap: 12px; text-decoration: none; padding: 18px;
-            border-radius: 10px; font-size: 1.1rem; width: 100%;
-            transition: transform 0.2s; border: none;
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center;
+            gap: 12px; 
+            text-decoration: none; 
+            padding: 15px;
+            border-radius: 10px; 
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            width: 100%;
+            border: none;
         }
-        .tg-button:hover { transform: translateY(-3px); opacity: 0.9; color: white !important; }
 
         .map-container {
-            border-radius: 15px; overflow: hidden; height: 350px;
-            border: 1px solid #e2e8f0; position: relative;
+            border-radius: 15px; 
+            overflow: hidden; 
+            height: 350px;
+            border: 1px solid #e2e8f0;
         }
+
         iframe { width: 100%; height: 100%; border: 0; }
+        
+        footer { text-align: center; padding: 20px; color: #888; }
     </style>
 </head>
 <body>
@@ -67,16 +111,15 @@
     </header>
 
     <main class="container">
-        <section>
-            <div class="alert-card">
-                <h4 style="color: #d9534f; margin-bottom: 10px;"><i class="fas fa-bolt"></i> Важное сообщение</h4>
-                <p style="margin: 0;">Уважаемые жильцы! Проводится ОСС с 24.03.2026 по 07.04.2026.</p>
-            </div>
-        </section>
+        <div class="alert-card">
+            <h4 style="color: #d9534f; margin-bottom: 10px; font-weight: bold;">Важное сообщение</h4>
+            <p style="margin: 0;">Уважаемые жильцы! Проводится ОСС с 24.03.2026 по 07.04.2026.</p>
+        </div>
 
         <div class="grid-custom">
+            <!-- КОНТАКТЫ -->
             <div class="contact-box">
-                <h3 style="margin-top: 0; color: #333;"><i class="fas fa-phone-alt"></i> Контакты</h3>
+                <h3 style="margin-top: 0;">Контакты</h3>
                 <p>📍 <b>Адрес:</b><br>Москва, Чкаловский б-р, 6</p>
                 <p>📞 <b>Диспетчер:</b><br><a href="tel:84955058989" style="font-size: 1.2rem; font-weight: 600;">8 495 505-89-89</a></p>
                 
@@ -85,13 +128,14 @@
                 </a>
             </div>
 
+            <!-- КАРТА (Теперь должна ожить) -->
             <div class="map-container">
-                <iframe src="https://yandex.ru" allowfullscreen="true"></iframe>
+                <iframe src="https://yandex.ru"></iframe>
             </div>
         </div>
     </main>
 
-    <footer style="text-align: center; padding: 20px; color: #888;">
+    <footer>
         <small>&copy; 2026 Совет МКД "Чкаловский 6"</small>
     </footer>
 
