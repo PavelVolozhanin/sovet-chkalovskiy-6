@@ -20,7 +20,30 @@
             --tg-color: #0088cc;
         }
 
-        body { background-color: #f4f7f9; font-family: system-ui, -apple-system, sans-serif; }
+        body { 
+    background-color: #f4f7f9; 
+    /* Основной текст — Inter (очень чистый) */
+    font-family: 'Inter', sans-serif; 
+    line-height: 1.6;
+}
+
+h1, h2, h3, .hero p, .tg-button { 
+    /* Заголовки и кнопка — Montserrat (стильный и строгий) */
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 700; 
+    letter-spacing: -0.5px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h2 { 
+    font-size: 1.6rem;
+    color: #333;
+}
         
         /* Шапка-герой */
         .hero {
