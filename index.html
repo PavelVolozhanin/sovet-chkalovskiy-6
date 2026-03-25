@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com" rel="stylesheet">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Совет МКД Чкаловский 6</title>
     
-    <!-- Подключаем стили Pico.css и Иконки FontAwesome -->
+    <!-- Подключаем шрифты Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+
+    <!-- Подключаем стили Pico.css и Иконки FontAwesome (полные рабочие ссылки) -->
     <link rel="stylesheet" href="https://unpkg.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
     
@@ -21,38 +22,32 @@
         }
 
         body { 
-    background-color: #f4f7f9; 
-    /* Основной текст — Inter (очень чистый) */
-    font-family: 'Inter', sans-serif; 
-    line-height: 1.6;
-}
+            background-color: #f4f7f9; 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.6;
+        }
 
-h1, h2, h3, .hero p, .tg-button { 
-    /* Заголовки и кнопка — Montserrat (стильный и строгий) */
-    font-family: 'Montserrat', sans-serif; 
-    font-weight: 700; 
-    letter-spacing: -0.5px;
-}
+        h1, h2, h3, .hero p, .tg-button { 
+            font-family: 'Montserrat', sans-serif; 
+            font-weight: 700; 
+            letter-spacing: -0.5px;
+        }
 
-.hero h1 {
-    font-size: 2.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-h2 { 
-    font-size: 1.6rem;
-    color: #333;
-}
-        
-        /* Шапка-герой */
         .hero {
             background: linear-gradient(135deg, #0056b3 0%, #0088cc 100%);
             color: white;
             padding: 60px 20px;
             text-align: center;
             margin-bottom: 2rem;
-            border-bottom: 5px solid #ffcc00; /* Золотистая акцентная линия */
+            border-bottom: 5px solid #ffcc00;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: white;
+            margin-bottom: 10px;
         }
 
         main { 
@@ -60,22 +55,20 @@ h2 {
             padding: 30px; 
             border-radius: 16px; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
-            margin-top: -40px; /* Наплыв на шапку */
+            margin-top: -40px; 
             position: relative;
             z-index: 10;
         }
 
-        /* Красивые заголовки */
         h2 { 
             border-left: 5px solid var(--primary); 
             padding-left: 15px; 
             margin-bottom: 25px; 
             font-size: 1.5rem;
+            color: #333;
         }
 
-        /* Стили карточек */
         .alert-card {
-            border: none;
             border-left: 6px solid #d9534f;
             background: #fff5f5;
             padding: 20px;
@@ -94,74 +87,66 @@ h2 {
             margin-bottom: 10px;
             background: #f8fafc;
             border: 1px solid #edf2f7;
-            transition: all 0.2s;
         }
-        .doc-item:hover { background: #eef2f7; border-color: var(--primary); }
 
         .contact-box { 
             background: #ffffff; 
             padding: 25px; 
             border-radius: 12px; 
             border: 1px solid #e2e8f0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
         }
         
         .map-container {
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             height: 400px;
             border: 1px solid #e2e8f0;
         }
 
-        /* Кнопка Telegram */
         .tg-button { 
             background-color: var(--tg-color) !important; 
             border: none !important; 
             color: white !important;
-            font-weight: bold;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
+            text-decoration: none;
             transition: filter 0.2s, transform 0.2s !important;
         }
         .tg-button:hover { filter: brightness(1.1); transform: translateY(-2px); }
 
-        .secondary.outline { color: var(--primary); border-color: var(--primary); }
+        footer { margin-top: 50px; opacity: 0.7; font-size: 0.9rem; text-align: center; }
         
-        footer { margin-top: 50px; opacity: 0.7; font-size: 0.9rem; }
+        iframe { width: 100%; height: 100%; border: 0; }
     </style>
 </head>
 <body>
 
-    <!-- ВЕРХНЯЯ ЧАСТЬ -->
     <header class="hero">
         <div class="container">
-            <h1 style="margin-bottom: 10px; color: white;">Чкаловский бульвар, 6</h1>
+            <h1>Чкаловский бульвар, 6</h1>
             <p style="font-size: 1.2rem; opacity: 0.9;">Портал Совета МКД</p>
         </div>
     </header>
 
     <main class="container">
         
-        <!-- БЛОК: НОВОСТИ -->
         <section id="news">
             <h2><i class="fas fa-bullhorn" style="color: #d9534f;"></i> Объявления</h2>
             <div class="alert-card">
-                <h4 style="color: #d9534f; margin-bottom: 10px; font-weight: bold;">⚡️ Важное сообщение</h4>
-                <p style="margin-bottom: 10px;">Уважаемые жильцы! Проводится ОСС по выбору совета МКД с 24.03.2026 по 07.04.2026. Просим принять активное участие.</p>
-                <hr style="margin: 10px 0; opacity: 0.2;">
+                <h4 style="color: #d9534f; margin-bottom: 10px;">⚡️ Важное сообщение</h4>
+                <p>Уважаемые жильцы! Проводится ОСС по выбору совета МКД с 24.03.2026 по 07.04.2026.</p>
+                <hr style="margin: 10px 0; opacity: 0.1;">
                 <small><i class="far fa-calendar-alt"></i> Обновлено: 24.03.2026</small>
             </div>
         </section>
 
-        <!-- БЛОК: ДОКУМЕНТЫ -->
         <section id="docs">
             <h2><i class="fas fa-file-pdf" style="color: var(--primary);"></i> Документы</h2>
             <div class="doc-item" style="border-left: 4px solid #f0ad4e; background: #fffdf0;">
                 <span><b>📜 Устав Совета (Проект)</b></span>
-                <a href="ustav.html" class="secondary outline" role="button" style="margin-bottom: 0; padding: 5px 15px;">Читать</a>
+                <a href="ustav.html" class="secondary outline" role="button" style="padding: 5px 15px;">Читать</a>
             </div>
             <div class="doc-item">
                 <span>План собраний совета на 2026 год</span>
@@ -171,40 +156,40 @@ h2 {
 
         <hr style="margin: 40px 0; opacity: 0.1;">
 
-        <!-- БЛОК: КОНТАКТЫ И КАРТА -->
         <section id="contacts">
             <h2><i class="fas fa-map-marker-alt" style="color: #28a745;"></i> Контакты и адрес</h2>
             <div class="grid">
-                
                 <div class="contact-box">
                     <div style="margin-bottom: 25px;">
-                        <small style="color: #666; text-transform: uppercase; font-weight: bold;">📍 Наш адрес:</small>
-                        <strong style="font-size: 1.5em; color: var(--primary); display: block; margin-top: 5px; line-height: 1.2;">
-                            г. Москва,<br>Чкаловский бульвар, д. 6
+                        <small style="color: #666; text-transform: uppercase;">📍 Адрес:</small>
+                        <strong style="font-size: 1.4em; color: var(--primary); display: block;">
+                            г. Москва, Чкаловский бульвар, д. 6
                         </strong>
                     </div>
 
-                    <p><b><i class="fas fa-phone"></i> Диспетчер (24/7):</b><br>
-                    <a href="tel:8 800 505-89-89" style="font-size: 1.2em; font-weight: bold;">8 495 505-89-89</a></p>
+                    <p><b><i class="fas fa-phone"></i> Диспетчер:</b><br>
+                    <a href="tel:84955058989" style="font-weight: bold;">8 495 505-89-89</a></p>
                     
                     <p><b><i class="fas fa-user-tie"></i> Председатель:</b><br>Вакансия открыта</p>
                     
-                    <a href="https://t.me" target="_blank" class="tg-button" role="button">
+                    <!-- Обновленная ссылка на ТГ -->
+                    <a href="https://t.me/+Toj6RnSvdjIwMGNi" target="_blank" class="tg-button" role="button">
                         <i class="fab fa-telegram-plane"></i> Чат жильцов в Telegram
                     </a>
                 </div>
                 
                 <div class="map-container">
-                    <iframe src="https://yandex.ru" frameborder="0" allowfullscreen="true"></iframe>
+                    <!-- Исправленная карта -->
+                    <iframe src="https://yandex.ru"></iframe>
                 </div>
-
             </div>
         </section>
     </main>
 
-    <footer class="container" style="text-align: center;">
-        <p>&copy; 2026 Совет МКД "Чкаловский 6". <br> Сделано для удобства соседей.</p>
+    <footer>
+        <p>&copy; 2026 Совет МКД "Чкаловский 6".</p>
     </footer>
 
 </body>
 </html>
+
