@@ -5,138 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Совет МКД Чкаловский 6</title>
     
-    <!-- ПОЛНЫЕ ССЫЛКИ НА СТИЛИ И ШРИФТЫ -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net">
+    <!-- Подключаем только иконки, если они не загрузятся — сайт не сломается -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
-    <link href="https://fonts.googleapis.com" rel="stylesheet">
 
     <style>
-        :root { --primary: #0056b3; --tg-color: #0088cc; }
+        /* ПОЛНОСТЬЮ АВТОНОМНЫЕ СТИЛИ */
+        * { box-sizing: border-box; }
         
         body { 
-            background-color: #f4f7f9; 
-            font-family: 'Inter', sans-serif; 
-            margin: 0; 
+            background-color: #007bc1; /* Синий фон как на скриншоте */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .hero {
-            background: linear-gradient(135deg, #0056b3 0%, #0088cc 100%);
-            color: white; 
-            padding: 40px 20px 100px; 
+        .header {
+            color: white;
             text-align: center;
+            padding: 40px 20px;
         }
 
-        .hero h1 { 
-            font-family: 'Montserrat', sans-serif; 
-            color: white !important; 
-            margin: 0; 
-            font-size: 2.2rem; 
-        }
+        .header h1 { margin: 0; font-size: 2.2em; }
+        .header p { opacity: 0.8; margin-top: 5px; }
 
-        main { 
-            background: white; 
-            padding: 30px; 
-            border-radius: 16px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-            margin: -60px auto 40px; 
+        .main-card {
+            background: white;
+            width: 95%;
             max-width: 1000px;
-            position: relative; 
-            z-index: 10;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            margin-bottom: 40px;
         }
 
-        .alert-card {
-            border-left: 6px solid #d9534f; 
+        .alert-box {
             background: #fff5f5;
-            padding: 20px; 
-            border-radius: 12px; 
-            margin-bottom: 30px;
-            text-align: left;
-        }
-
-        /* Исправление сетки для мобильных и ПК */
-        .grid-custom { 
-            display: flex; 
-            flex-wrap: wrap; 
-            gap: 25px; 
-        }
-
-        .contact-box, .map-container { 
-            flex: 1 1 400px; /* Растягиваются или встают в ряд */
-        }
-
-        .contact-box { 
-            border: 1px solid #e2e8f0; 
-            padding: 25px; 
-            border-radius: 15px; 
-            background: #fcfcfc;
-            text-align: left;
-        }
-        
-        .tg-button { 
-            background-color: var(--tg-color) !important; 
-            color: white !important;
-            display: inline-flex; 
-            align-items: center; 
-            justify-content: center;
-            gap: 12px; 
-            text-decoration: none; 
+            border-left: 5px solid #d9534f;
             padding: 15px;
-            border-radius: 10px; 
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            width: 100%;
-            border: none;
+            border-radius: 8px;
+            margin-bottom: 25px;
         }
 
-        .map-container {
-            border-radius: 15px; 
-            overflow: hidden; 
-            height: 350px;
-            border: 1px solid #e2e8f0;
+        .alert-box h4 { color: #d9534f; margin: 0 0 5px 0; }
+        .alert-box p { margin: 0; color: #333; font-size: 0.95em; }
+
+        /* Сетка контакты + карта */
+        .content-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
+
+        .contact-info {
+            flex: 1 1 350px;
+            background: #fcfcfc;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .map-box {
+            flex: 1 1 350px;
+            height: 350px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+
+        .tg-button {
+            display: block;
+            background: #0088cc;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        .tg-button:hover { background: #0077b5; }
+
+        footer { color: rgba(255,255,255,0.6); padding-bottom: 30px; font-size: 0.8em; }
 
         iframe { width: 100%; height: 100%; border: 0; }
         
-        footer { text-align: center; padding: 20px; color: #888; }
+        h3 { margin-top: 0; color: #2c3e50; }
+        a { color: #0056b3; }
     </style>
 </head>
 <body>
 
-    <header class="hero">
-        <div class="container">
-            <h1>Чкаловский бульвар, 6</h1>
-            <p style="opacity: 0.9;">Портал Совета МКД</p>
-        </div>
-    </header>
+    <div class="header">
+        <h1>Чкаловский бульвар, 6</h1>
+        <p>Портал Совета МКД</p>
+    </div>
 
-    <main class="container">
-        <div class="alert-card">
-            <h4 style="color: #d9534f; margin-bottom: 10px; font-weight: bold;">Важное сообщение</h4>
-            <p style="margin: 0;">Уважаемые жильцы! Проводится ОСС с 24.03.2026 по 07.04.2026.</p>
+    <div class="main-card">
+        <!-- Сообщение -->
+        <div class="alert-box">
+            <h4>Важное сообщение</h4>
+            <p>Уважаемые жильцы! Проводится ОСС с 24.03.2026 по 07.04.2026.</p>
         </div>
 
-        <div class="grid-custom">
-            <!-- КОНТАКТЫ -->
-            <div class="contact-box">
-                <h3 style="margin-top: 0;">Контакты</h3>
+        <div class="content-grid">
+            <!-- Контакты -->
+            <div class="contact-info">
+                <h3>Контакты</h3>
                 <p>📍 <b>Адрес:</b><br>Москва, Чкаловский б-р, 6</p>
-                <p>📞 <b>Диспетчер:</b><br><a href="tel:84955058989" style="font-size: 1.2rem; font-weight: 600;">8 495 505-89-89</a></p>
+                <p>📞 <b>Диспетчер:</b><br><a href="tel:84955058989" style="font-size: 1.1em; font-weight: bold;">8 495 505-89-89</a></p>
                 
                 <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="tg-button">
                     <i class="fab fa-telegram-plane"></i> Вступить в чат
                 </a>
             </div>
 
-            <!-- КАРТА (Теперь должна ожить) -->
-            <div class="map-container">
-                <iframe src="https://yandex.ru"></iframe>
+            <!-- Карта (ПРОВЕРЕННАЯ ССЫЛКА) -->
+            <div class="map-box">
+                <iframe src="https://yandex.ru" allowfullscreen="true"></iframe>
             </div>
         </div>
-    </main>
+    </div>
 
     <footer>
-        <small>&copy; 2026 Совет МКД "Чкаловский 6"</small>
+        &copy; 2026 Совет МКД "Чкаловский 6"
     </footer>
 
 </body>
