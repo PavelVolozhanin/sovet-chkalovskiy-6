@@ -5,27 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Совет МКД Чкаловский 6</title>
     
-    <!-- Подключаем стили Pico.css и Иконки FontAwesome -->
-    <link rel="stylesheet" href="https://unpkg.com">
+    <!-- Подключаем рабочие стили Pico.css и Иконки FontAwesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
     
     <style>
         :root {
-            --primary: #0056b3;
-            --primary-hover: #004494;
+            --primary: #8b4513; 
+            --primary-hover: #5d2e0d;
             --tg-color: #0088cc;
         }
 
         body { background-color: #f4f7f9; font-family: system-ui, -apple-system, sans-serif; }
         
-        /* Шапка-герой */
         .hero {
-            background: linear-gradient(135deg, #0056b3 0%, #0088cc 100%);
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('https://images.unsplash.com');
+            background-size: cover;
+            background-position: center;
             color: white;
-            padding: 60px 20px;
+            padding: 70px 20px;
             text-align: center;
             margin-bottom: 2rem;
-            border-bottom: 5px solid #ffcc00; /* Золотистая акцентная линия */
+            border-bottom: 5px solid #ffcc00;
         }
 
         main { 
@@ -33,12 +35,11 @@
             padding: 30px; 
             border-radius: 16px; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
-            margin-top: -40px; /* Наплыв на шапку */
+            margin-top: -50px; 
             position: relative;
             z-index: 10;
         }
 
-        /* Красивые заголовки */
         h2 { 
             border-left: 5px solid var(--primary); 
             padding-left: 15px; 
@@ -46,7 +47,6 @@
             font-size: 1.5rem;
         }
 
-        /* Стили карточек */
         .alert-card {
             border: none;
             border-left: 6px solid #d9534f;
@@ -54,9 +54,7 @@
             padding: 20px;
             border-radius: 12px;
             margin-bottom: 30px;
-            transition: transform 0.2s;
         }
-        .alert-card:hover { transform: scale(1.01); }
 
         .doc-item {
             display: flex;
@@ -67,18 +65,16 @@
             margin-bottom: 10px;
             background: #f8fafc;
             border: 1px solid #edf2f7;
-            transition: all 0.2s;
         }
-        .doc-item:hover { background: #eef2f7; border-color: var(--primary); }
 
         .contact-box { 
             background: #ffffff; 
             padding: 25px; 
             border-radius: 12px; 
             border: 1px solid #e2e8f0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
         }
         
+        /* Исправленный контейнер для вашей карты */
         .map-container {
             border-radius: 12px;
             overflow: hidden;
@@ -87,7 +83,12 @@
             border: 1px solid #e2e8f0;
         }
 
-        /* Кнопка Telegram */
+        /* Чтобы iframe занимал всё место в контейнере */
+        .map-container iframe {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
         .tg-button { 
             background-color: var(--tg-color) !important; 
             border: none !important; 
@@ -97,18 +98,18 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            transition: filter 0.2s, transform 0.2s !important;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 8px;
         }
-        .tg-button:hover { filter: brightness(1.1); transform: translateY(-2px); }
 
         .secondary.outline { color: var(--primary); border-color: var(--primary); }
         
-        footer { margin-top: 50px; opacity: 0.7; font-size: 0.9rem; }
+        footer { margin-top: 50px; opacity: 0.7; font-size: 0.9rem; padding-bottom: 40px; }
     </style>
 </head>
 <body>
 
-    <!-- ВЕРХНЯЯ ЧАСТЬ -->
     <header class="hero">
         <div class="container">
             <h1 style="margin-bottom: 10px; color: white;">Чкаловский бульвар 6</h1>
@@ -118,7 +119,6 @@
 
     <main class="container">
         
-        <!-- БЛОК: НОВОСТИ -->
         <section id="news">
             <h2><i class="fas fa-bullhorn" style="color: #d9534f;"></i> Объявления</h2>
             <div class="alert-card">
@@ -129,7 +129,6 @@
             </div>
         </section>
 
-        <!-- БЛОК: ДОКУМЕНТЫ -->
         <section id="docs">
             <h2><i class="fas fa-file-pdf" style="color: var(--primary);"></i> Документы</h2>
             <div class="doc-item" style="border-left: 4px solid #f0ad4e; background: #fffdf0;">
@@ -138,13 +137,12 @@
             </div>
             <div class="doc-item">
                 <span>План собраний совета на 2026 год</span>
-                <span style="color: #ccc;">Ожидается разработка и согласование</span>
+                <span style="color: #ccc;">Будет утвержден в случае избрания совета</span>
             </div>
         </section>
 
         <hr style="margin: 40px 0; opacity: 0.1;">
 
-        <!-- БЛОК: КОНТАКТЫ И КАРТА -->
         <section id="contacts">
             <h2><i class="fas fa-map-marker-alt" style="color: #28a745;"></i> Контакты и адрес</h2>
             <div class="grid">
@@ -158,17 +156,16 @@
                     </div>
 
                     <p><b><i class="fas fa-phone"></i> Диспетчер (24/7):</b><br>
-                    <a href="tel:8 (800) 505-89-89" style="font-size: 1.2em; font-weight: bold;">8 (495) 505-89-89</a></p>
+                    <a href="tel:84955058989" style="font-size: 1.2em; font-weight: bold;">8 (495) 505-89-89</a></p>
                     
                     <p><b><i class="fas fa-user-tie"></i> Председатель:</b><br>Вакантно</p>
                     
-                    <a href="https://t.me" target="_blank" class="tg-button" role="button">
-                        <i class="fab fa-telegram-plane"></i> Чат жильцов в Telegram
-                    </a>
-                </div>
+               <a href="https://t.me/+Toj6RnSvdjIwMGNi" target="_blank" class="tg-button" role="button">
+    <i class="fab fa-telegram-plane"></i> Чат жильцов в Telegram
+</a>
                 
-                <div class="map-container">
-                   <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Add21be37eb7e4e2f3af32ce0f06503f2e59f543ff5b778bf7ef76c146520c87a&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+              <div class="map-container">
+                    <<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Add21be37eb7e4e2f3af32ce0f06503f2e59f543ff5b778bf7ef76c146520c87a&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>>
                 </div>
 
             </div>
