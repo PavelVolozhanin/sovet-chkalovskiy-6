@@ -120,37 +120,33 @@
 
     <main class="container">
         
-     <section id="news" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-    <h2 style="margin-bottom: 15px; font-size: 1.5rem; display: flex; align-items: center; gap: 10px;">
+   <section id="news" style="font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+    <h2 style="margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
         <span style="color: #d9534f;">📢</span> Объявления
     </h2>
     
-    <div class="alert-card" style="border: 1px solid rgba(0,0,0,0.1); padding: 20px; border-radius: 12px; background-color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
-            <span style="color: #d9534f; font-size: 1.2rem;">⚡️</span>
-            <h4 style="color: #d9534f; margin: 0; font-weight: bold; font-size: 1.1rem;">Важное сообщение</h4>
-        </div>
+    <div class="alert-card" style="border: 1px solid #eee; padding: 20px; border-radius: 15px; background-color: #fcfcfc; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+        <h4 style="color: #d9534f; margin: 0 0 10px 0; font-weight: bold; display: flex; align-items: center; gap: 5px;">
+            <span>⚡️</span> Важное сообщение
+        </h4>
         
-        <p style="margin-bottom: 18px; line-height: 1.6; color: #333;">
+        <p style="margin-bottom: 20px; line-height: 1.5; color: #333; font-size: 16px;">
             Уважаемые жильцы! Проводится ОСС по выбору совета МКД с <b>24.03.2026</b> по <b>07.04.2026</b>. 
-            Просим принять активное участие в жизни нашего дома.
         </p>
 
-        <!-- Кнопка, адаптированная под мобильные устройства -->
-        <a href="7.	https://ed.mos.ru/lk/polls/answer/oss/1813276/" 
-           target="_blank" 
-           style="display: block; width: 100%; max-width: 300px; background-color: #d9534f; color: #ffffff; text-decoration: none; font-weight: 600; padding: 14px 20px; border-radius: 8px; text-align: center; box-sizing: border-box; transition: background 0.3s ease;">
-            Принять участие в голосовании
+        <!-- Кнопка с усиленным методом открытия -->
+        <a href="https://ed.mos.ru" 
+           onclick="window.location.href='edmosru://lk/polls/answer/oss/1813276/'; setTimeout(function(){ window.location.href='https://ed.mos.ru'; }, 500); return false;"
+           style="display: block; width: 100%; background-color: #d9534f; color: #fff; text-decoration: none; font-weight: bold; padding: 16px; border-radius: 10px; text-align: center; box-sizing: border-box; font-size: 16px;">
+            Голосовать в приложении
         </a>
 
-        <p style="margin-top: 12px; font-size: 0.85rem; color: #666;">
-            <i style="font-style: normal; opacity: 0.7;">💡 Совет: если у вас установлено приложение «Электронный дом», ссылка откроется прямо в нем.</i>
-        </p>
+        <div style="margin-top: 15px; padding: 10px; background: #fffbe6; border-radius: 8px; border: 1px solid #ffe58f; font-size: 13px; color: #856404;">
+            <b>Если не открылось:</b> нажмите на три точки в углу браузера и выберите <b>"Открыть во внешнем браузере"</b> или <b>"Открыть в приложении"</b>.
+        </div>
 
-        <hr style="margin: 15px 0; border: 0; border-top: 1px solid #eee;">
-        
-        <div style="color: #888; font-size: 0.8rem; display: flex; align-items: center; gap: 5px;">
-            <span>📅</span> Обновлено: 24.03.2026
+        <div style="margin-top: 15px; color: #999; font-size: 12px;">
+            📅 Обновлено: 24.03.2026
         </div>
     </div>
 </section>
