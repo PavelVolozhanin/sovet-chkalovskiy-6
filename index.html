@@ -120,33 +120,50 @@
 
     <main class="container">
         
-       <section id="news">
+
+
+
+
+<section id="news">
     <h2 style="margin-bottom: 15px;">
         <i class="fas fa-bullhorn" style="color: #d9534f;"></i> Объявления
     </h2>
     
-    <div class="alert-card" style="border: 1px solid rgba(0,0,0,0.1); padding: 15px; border-radius: 8px;">
+    <div class="alert-card" style="border: 1px solid rgba(0,0,0,0.1); padding: 15px; border-radius: 12px; background: #fff5f5;">
         <h4 style="color: #d9534f; margin-bottom: 10px; font-weight: bold;">⚡️ Важное сообщение</h4>
         
-        <p style="margin-bottom: 12px; line-height: 1.5;">
+        <p style="margin-bottom: 16px; line-height: 1.5;">
             Уважаемые жильцы! Проводится ОСС по выбору совета МКД с 24.03.2026 по 07.04.2026. 
             Просим принять активное участие.
         </p>
 
-        <!-- Прямая ссылка на голосование -->
-        <a href="https://ed.mos.ru/lk/polls/answer/oss/1813276/" 
+        <!-- Оптимизированная кнопка для мобильных -->
+      <a href="https://ed.mos.ru/lk/polls/answer/oss/1813276/" 
            target="_blank" 
-           style="color: #d9534f; text-decoration: underline; font-weight: 500; display: inline-block; margin-bottom: 10px;">
-            Принять участие в голосовании
+           style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; 
+                  background-color: #d9534f; color: white; text-decoration: none; 
+                  padding: 12px 24px; border-radius: 10px; font-weight: bold; 
+                  box-shadow: 0 4px 12px rgba(217, 83, 79, 0.3); transition: transform 0.2s;">
+            <i class="fas fa-external-link-alt"></i>
+            <span>Голосовать в «Электронном доме»</span>
         </a>
-
-        <hr style="margin: 10px 0; opacity: 0.2;">
+        <hr style="margin: 15px 0; opacity: 0.1;">
         
-        <small style="color: #666;">
-            <i class="far fa-calendar-alt"></i> Обновлено: 24.03.2026
-        </small>
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <small style="color: #666;">
+                <i class="far fa-calendar-alt"></i> Обновлено: 24.03.2026
+            </small>
+            <small style="color: #d9534f; font-weight: 500;">
+                <i class="fas fa-mobile-alt"></i> 
+            </small>
+        </div>
     </div>
 </section>
+
+
+
+
+
 
      <section id="docs">
             <h2><i class="fas fa-file-invoice" style="color: var(--primary);"></i> Документы и Проекты</h2>
